@@ -8,6 +8,9 @@ export type SheetContextProps = {
   name: string;
   zone: string;
   date: Date;
+  startHour?: string;
+  endHour?: string;
+  totalTime?: string;
 }
 
 export const SheetsContext = createContext<SheetContextProps[]>([]);
