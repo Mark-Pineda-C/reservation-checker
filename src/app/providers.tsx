@@ -11,7 +11,7 @@ export function Providers({children}: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <NextUIProvider>
-        <NextThemesProvider attribute="class" defaultTheme="dark">
+        <NextThemesProvider attribute="class" defaultTheme="light">
           <SheetProvider>{children}</SheetProvider>
         </NextThemesProvider>
       </NextUIProvider>

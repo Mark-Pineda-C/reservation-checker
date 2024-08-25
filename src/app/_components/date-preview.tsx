@@ -59,7 +59,7 @@ export default function DatePreview({
         <CardBody className="flex flex-col items-center gap-3">
           {!dayReservations ||
             (dayReservations.length == 0 && (
-              <span className="text-xs w-full text-white">Sin Reservas.</span>
+              <span className="text-xs w-full text-transparent">Sin Reservas.</span>
             ))}
           {dayReservations.slice(0, 3).map((reservation, i) => (
             <span
