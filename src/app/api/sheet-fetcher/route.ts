@@ -36,7 +36,7 @@ export async function GET() {
           apartment,
           name,
           zone,
-          date: new Date(newDate),
+          date: newDate,
           startHour,
           endHour,
           totalTime,

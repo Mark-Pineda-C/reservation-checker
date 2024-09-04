@@ -7,7 +7,7 @@ export type SheetContextProps = {
   apartment: string;
   name: string;
   zone: string;
-  date: Date;
+  date: string;
   startHour?: string;
   endHour?: string;
   totalTime?: string;

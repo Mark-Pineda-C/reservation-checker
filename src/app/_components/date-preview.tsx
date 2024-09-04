@@ -51,7 +51,7 @@ export default function DatePreview({
             })}
           </ModalHeader>
           <ModalBody className="flex flex-col pb-4">
-            <pre>
+            <pre className="sr-only">
               {JSON.stringify(
                 dayReservations.map((x) => x.date),
                 null,
