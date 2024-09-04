@@ -41,7 +41,7 @@ export default function DatePreview({
 
   return (
     <>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
         <ModalContent>
           <ModalHeader>
             Reservas del{" "}
@@ -59,7 +59,9 @@ export default function DatePreview({
                 <div className="flex items-center space-x-4 h-5">
                   <span className="font-medium">{reservation.zone}</span>
                   <Divider orientation="vertical" />
-                  <span className="">Departamento {reservation.apartment}</span>
+                  <span className="">
+                    Departamento {reservation.apartment} - {reservation.tower}
+                  </span>
                 </div>
                 {reservation.startHour && reservation.endHour && (
                   <>

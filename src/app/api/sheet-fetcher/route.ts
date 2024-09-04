@@ -19,14 +19,14 @@ export async function GET() {
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "'Respuestas de formulario 1'!C:I",
+      range: "'Respuestas de formulario 1'!C:N",
     })
 
     let data: SheetContextProps[] = [];
 
 
     response.data.values?.forEach((row, index) => {
-      const [apartment, name, zone, date, startHour, endHour, totalTime] = row;
+      const [apartment, name, zone, date, startHour, endHour, totalTime, _, __, ___, ____, tower] = row;
 
       const _newDate = date.split("/");
       const newDate = `${_newDate[1]}/${_newDate[0]}/${_newDate[2]}`;
@@ -39,7 +39,8 @@ export async function GET() {
           date: new Date(newDate),
           startHour,
           endHour,
-          totalTime
+          totalTime,
+          tower
         });
       }
     })
