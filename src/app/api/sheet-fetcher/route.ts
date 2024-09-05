@@ -1,6 +1,8 @@
 import { SheetContextProps } from '@/context/sheet-provider';
 import { google } from 'googleapis';
 
+export const fetchCache = "force-no-store"
+
 export async function GET() {
   const auth = new google.auth.GoogleAuth({
     credentials: {
